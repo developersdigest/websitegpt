@@ -55,7 +55,7 @@ app.post("/deploy", (req, res) => {
   fs.writeFileSync(filePath, htmlContent);
   console.log(`File saved at: ${filePath}`);
   // 15. Send the URL of the generated file as a response
-  res.send(`https://gpt-website-builder-1-0.onrender.com/gpt/${uniqueFileName}`);
+  res.send(`https://websitegpt.onrender.com/gpt/${uniqueFileName}`);
 });
 // 16. Serve static files from the 'public' directory
 app.use(express.static(publicDir));
