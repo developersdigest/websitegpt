@@ -1,0 +1,36 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Generates a functional Website",
+      "description": "Generates HTML to put within a body tag with tailwind css classes to generate a basic website that I am requested for",
+      "version": "v1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://gpt-website-builder-1-0.onrender.com"
+      }
+    ],
+    "paths": {
+      "/deploy": {
+        "post": {
+          "description": "Deploy the HTML with tailwindcss classes to a website.",
+          "operationId": "deploy",
+          "parameters": [
+            {
+              "name": "html",
+              "in": "query",
+              "description": "The string of html with tailwind css classes to go within <body> </body> tags. Nothing more.",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "deprecated": false
+        }
+      }
+    },
+    "components": {
+      "schemas": {}
+    }
+  }
